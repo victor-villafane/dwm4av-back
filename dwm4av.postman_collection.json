@@ -1,0 +1,179 @@
+{
+	"info": {
+		"_postman_id": "feedc92d-c86f-4953-9595-ebfa794bb96e",
+		"name": "dwm4av",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29900298"
+	},
+	"item": [
+		{
+			"name": "getProductos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:2025/api/productos",
+					"host": [
+						"localhost"
+					],
+					"port": "2025",
+					"path": [
+						"api",
+						"productos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getProductosById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:2025/api/productos/68c966ff54afdcd5d795ebb8",
+					"host": [
+						"localhost"
+					],
+					"port": "2025",
+					"path": [
+						"api",
+						"productos",
+						"68c966ff54afdcd5d795ebb8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "guardarProducto",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\r\n        \"nombre\": \"Tablet \",\r\n        \"precio\": 3000,\r\n        \"categoria\": \"Tablet\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:2025/api/productos",
+					"host": [
+						"localhost"
+					],
+					"port": "2025",
+					"path": [
+						"api",
+						"productos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteProducto",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:2025/api/productos/68cd6a5f166edd77c98fafa6",
+					"host": [
+						"localhost"
+					],
+					"port": "2025",
+					"path": [
+						"api",
+						"productos",
+						"68cd6a5f166edd77c98fafa6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "reemplazarProducto",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\r\n        \"_id\": \"68c966ff54afdcd5d795ebbb\",\r\n        \"categoria\": \"Notebook\"    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:2025/api/productos/68c966ff54afdcd5d795ebbb",
+					"host": [
+						"localhost"
+					],
+					"port": "2025",
+					"path": [
+						"api",
+						"productos",
+						"68c966ff54afdcd5d795ebbb"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "editarProducto",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\r\n        \"nombre\": \"Notebooks123444\",\r\n        \"precio\": 3000123444\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:2025/api/productos/68c966ff54afdcd5d795ebb9",
+					"host": [
+						"localhost"
+					],
+					"port": "2025",
+					"path": [
+						"api",
+						"productos",
+						"68c966ff54afdcd5d795ebb9"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getClientes",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "agregarCarrito",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "getCarrito",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
