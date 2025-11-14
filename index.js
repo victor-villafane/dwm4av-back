@@ -25,6 +25,9 @@ app.use( "/productos",ProductosRoute )
 app.use( "/api/productos",ProductosApiRoute )
 app.use("/api/clientes", ClientesApiRoute)
 app.use("/api/usuarios", UsuariosApiRoute)
-app.listen(2025, () => {
-    console.log("funcionando")
+
+const port = process.env.port || 2025
+
+app.listen(port, () => {
+    console.log("funcionando: " + port)
 })
