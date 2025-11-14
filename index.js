@@ -10,7 +10,7 @@ import cors from "cors" // npm i cors
 const app = express()
 
 const corsOptions = {
-    origin: "https://dwm4av.web.app",    // Permite solicites solo desde esta URL
+    origin: "*",    // Permite solicites solo desde esta URL
     methods: "GET,POST,PUT,DELETE",      // Metodos permitidos
 }
 
@@ -30,4 +30,5 @@ const port = process.env.PORT || 2025
 
 app.listen(port, () => {
     console.log("funcionando: " + port)
+    console.log("Mongodb: " + process.env.mongodb)
 })
