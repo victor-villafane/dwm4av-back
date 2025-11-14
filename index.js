@@ -26,7 +26,7 @@ app.use( "/api/productos",ProductosApiRoute )
 app.use("/api/clientes", ClientesApiRoute)
 app.use("/api/usuarios", UsuariosApiRoute)
 
-const port = process.env.port || 2025
+const port = process.env.PORT || 2025
 
 app.listen(port, () => {
     console.log("funcionando: " + port)
