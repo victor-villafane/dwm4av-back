@@ -10,7 +10,7 @@ import cors from "cors" // npm i cors
 const app = express()
 
 const corsOptions = {
-    origin: "http://localhost:5173",    // Permite solicites solo desde esta URL
+    origin: "https://dwm4av.web.app",    // Permite solicites solo desde esta URL
     methods: "GET,POST,PUT,DELETE",      // Metodos permitidos
 }
 
