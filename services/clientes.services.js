@@ -1,7 +1,7 @@
 import { MongoClient, ObjectId } from "mongodb"
 const mongodb = process.env.mongodb
-// const client = new MongoClient("mongodb+srv://admin:admin@hibridas.2awt6xp.mongodb.net/")
-const client = new MongoClient(mongodb)
+const client = new MongoClient("mongodb+srv://admin:admin@hibridas.2awt6xp.mongodb.net/")
+//const client = new MongoClient(mongodb)
 const db = client.db("DWM4AV")
 
 export async function getClientes( filter = {} ) {

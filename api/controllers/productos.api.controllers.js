@@ -20,6 +20,7 @@ export function getProductosById(req, res){
 }
 
 export function createProduct(req, res){
+    console.log(req.file)
     const producto = {
         nombre: req.body.nombre,
         categoria: req.body.categoria,
