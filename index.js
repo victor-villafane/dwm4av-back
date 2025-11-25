@@ -7,6 +7,8 @@ import swaggerFile from './swagger.output.json' with { type: 'json' }
 import swaggerUI from 'swagger-ui-express'
 import cors from "cors" // npm i cors
 import { resizeImage, upload } from "./middleware/upload.middleware.js"
+import http from "http"
+import { Server } from "socket.io"
 
 const app = express()
 //const upload = multer({ dest: 'uploads/' })
@@ -37,7 +39,35 @@ app.post('/upload', [upload.single('file'), resizeImage], function (req, res, ne
 })
 const port = process.env.PORT || 2025
 
-app.listen(port, () => {
+/*app.listen(port, () => {
+    console.log("funcionando: " + port)
+    console.log("Mongodb: " + process.env.mongodb)
+})*/
+
+const server = http.createServer(app)
+
+const io = new Server(server, {
+  cors: {
+    origin: '*'
+  }
+})
+
+io.on('connection', (socket) => {
+  console.log("conexion recibida", socket.id)
+
+  socket.on("hola", (data)=>{
+    console.log(data)
+    console.log("Recibi el hola!")
+    socket.emit("individual", {
+      message: "Hola!!"
+    })
+  })
+  socket.on("notificar", ()=>{
+    io.emit("todos")
+  })
+} )
+
+server.listen(port, () => {
     console.log("funcionando: " + port)
     console.log("Mongodb: " + process.env.mongodb)
 })
